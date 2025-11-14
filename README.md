@@ -26,7 +26,7 @@ O objetivo principal é demonstrar a estrutura e o funcionamento de uma loja vir
 > Como Executar o Projeto:
 
     > Baixe ou clone o repositório:
-    git clone https://github.com/Gustavobarrosjvl/FRONT-END-2s-2025/tree/main/Farma%2B 
+    git clone https://github.com/Gustavobarrosjvl/Farma-Plus.git 
     > Abra o arquivo index.html no navegador (basta clicar duas vezes).
     > Navegue pelas páginas e teste as interações do carrinho e botões.
 
