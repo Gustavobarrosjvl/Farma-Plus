@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title>Super Admin - Pedidos - Farma+</title>
+    <link rel="stylesheet" href="../../assets/css/superADM.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <a href="../../index.html" class="d-flex align-items-center text-decoration-none">
+            <img src="../../assets/img/logo_farma+.png" alt="Farma+" style="height: 40px; width: auto; ">
+        </a>
+
+        <div class="menu">
+            <a href="../superAdmin/principalSADM.html">Dashboard</a>
+            <a href="../superAdmin/farmaciaSADM.html">Farmácias</a>
+            <a href="#" class="active">Pedidos</a>
+            <a href="../superAdmin/clientesSADM.html">Clientes</a>
+            <a href="../superAdmin/financeiroSADM.html">Financeiro</a>
+            <a href="../superAdmin/perfilSADM.html">Perfil</a>
+        </div>
+    </div>
+
+
+    <div class="content">
+        <div class="page-title">Pedidos</div>
+
+
+        <div class="cards">
+            <div class="card">
+                <h4>Total de Pedidos</h4>
+                <p>8.912</p>
+            </div>
+            <div class="card">
+                <h4>Hoje</h4>
+                <p>218</p>
+            </div>
+            <div class="card">
+                <h4>No Mês</h4>
+                <p>4.912</p>
+            </div>
+            <div class="card">
+                <h4>Taxa de Entrega</h4>
+                <p>92%</p>
+            </div>
+        </div>
+
+
+        <div class="graficos">
+            <div class="grafico-box">
+                <h3>Status dos Pedidos</h3>
+                <canvas id="statusChart"></canvas>
+            </div>
+
+
+            <div class="grafico-box">
+                <h3>Pedidos por Dia</h3>
+                <canvas id="diario"></canvas>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        new Chart(statusChart, {
+            type: 'pie',
+            data: {
+                labels: ['Pendente', 'Em preparo', 'Saiu', 'Entregue'],
+                datasets: [{
+                    data: [140, 95, 80, 310],
+                    backgroundColor: ['#007bff', '#ff4f81', '#ffa726', '#43a047']
+                }]
+            }
+        });
+
+
+        new Chart(diario, {
+            type: 'line',
+            data: {
+                labels: ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab', 'Dom'],
+                datasets: [{
+                    data: [120, 150, 180, 200, 220, 170, 90],
+                    borderColor: '#007bff',
+                    tension: .3
+                }]
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Produto Dorflex - Farma+</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/rodape.css">
+
+</head>
+
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="d-flex align-items-center justify-content-between px-4 py-3 text-white sticky-top"
+    style="background-color:#005eff;">
+    <a href="../index.html" class="d-flex align-items-center text-decoration-none">
+      <img src="../assets/img/logo_farma+.png" alt="Farma+" style="height: 40px; width: auto; cursor: pointer;">
+    </a>
+
+    <div class="search-bar flex-grow-1 mx-4">
+      <input type="text" class="form-control" placeholder="Buscar">
+    </div>
+
+    <div class="menu d-flex gap-4">
+      <a href="meus-pedidos.html" class="d-inline-flex align-items-center gap-2 p-2 px-3 rounded"
+        style="background-color: #005eff; color: white; text-decoration: none; font-weight: 500; cursor: pointer;">
+        🧾 Meus Pedidos
+      </a>
+      <a href="carrinho.html" class="d-inline-flex align-items-center gap-2 p-2 px-3 rounded"
+        style="background-color: #005eff; color: white; text-decoration: none; font-weight: 500; cursor: pointer;">
+        🛒 Carrinho
+      </a>
+      <a href="perfil.html" class="d-inline-flex align-items-center gap-2 p-2 px-3 rounded"
+        style="background-color: #005eff; color: white; text-decoration: none; font-weight: 500; cursor: pointer;">
+        👤 Perfil
+      </a>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="produto-detalhe">
+    <div class="galeria">
+      <img src="../assets/img/dorflex/dorflex.png" alt="Dorflex 1">
+      <img src="../assets/img/dorflex/dorflex2.png" alt="Dorflex 2">
+      <img src="../assets/img/dorflex/dorflex3.png" alt="Dorflex 3">
+      <img src="../assets/img/dorflex/dorflex4.png " alt="Dorflex 4">
+    </div>
+
+    <div class="imagem-principal">
+      <img src="../assets/img/dorflex/dorflex.png" alt="Dorflex Analgésico">
+    </div>
+
+    <div class="info-produto">
+      <h3>Drogasil</h3>
+      <h1>Dorflex Analgésico e Relaxante Muscular 36 comprimidos</h1>
+      <p class="sub">36 comprimidos</p>
+      <div class="avaliacao">⭐ 4.8 <span>(22 avaliações)</span></div>
+
+      <div class="preco-produto">
+        <p class="preco-antigo">R$ 21,84 <span>13% off</span></p>
+        <p class="preco-novo">R$ 18,99</p>
+      </div>
+
+      <div class="quantidade">
+        <button>-</button>
+        <input type="text" value="1">
+        <button>+</button>
+      </div>
+
+      <button class="btn-comprar" id="btnAddCarrinho">Adicionar ao carrinho</button>
+
+      <div class="frete">
+        <p>Calcular Frete</p>
+        <div class="frete-input">
+          <input type="text" placeholder="Digite seu CEP">
+          <button>ok</button>
+        </div>
+        <a href="#">Não sei meu cep</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- DESCRIÇÃO -->
+  <section class="descricao">
+    <h2>Descrição</h2>
+    <h3>O que é Analgésico Dorflex 36 Comprimidos?</h3>
+    <p>
+      Dorflex é um analgésico e relaxante muscular que alivia dores associadas a contraturas musculares e cefaleias
+      tensionais.
+      Combinando os ativos citrato de orfenadrina, dipirona sódica e cafeína anidra, Dorflex atua rapidamente no alívio
+      da dor
+      e no relaxamento dos músculos. É indicado para o tratamento de dores agudas em processos traumáticos ou
+      inflamatórios.
+    </p>
+
+    <h3>Composição Dorflex 36 Comprimidos:</h3>
+    <p>
+      Citrato de orfenadrina 35 mg, dipirona sódica 300 mg, cafeína anidra 50 mg<br>
+      Excipientes: amido, estearato de magnésio e talco.
+    </p>
+
+    <h3>Para que serve Dorflex 36 Comprimidos?</h3>
+    <ul>
+      <li>Alívio de dores musculares</li>
+      <li>Cefaleia tensional</li>
+      <li>Contraturas musculares traumáticas</li>
+    </ul>
+
+    <h3>Como devo usar Dorflex 36 Comprimidos?</h3>
+    <p>Tomar 1 a 2 comprimidos, de 3 a 4 vezes ao dia, conforme orientação médica.</p>
+
+    <h3>Efeitos colaterais Dorflex 36 Comprimidos:</h3>
+    <ul>
+      <li>Sonolência</li>
+      <li>Tontura</li>
+      <li>Reações alérgicas</li>
+    </ul>
+
+    <a href="#">Ver bula</a>
+  </section>
+
+  <!-- CONFIRMAÇÃO -->
+  <div class="caixa-confirmacao" id="caixaConfirmacao">
+    <div class="conteudo">
+      <p>Produto adicionado ao carrinho!</p>
+      <button class="btn-continuar" onclick="fecharConfirmacao()">Continuar comprando</button>
+      <button class="btn-carrinho" onclick="window.location.href='carrinho.html'">Ir para o carrinho</button>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-container">
+        <!-- Sobre -->
+        <div class="footer-col">
+          <img src="../assets/img/logo_farma+.png" alt="Logo da Farma+" class="footer-logo">
+          <p>
+            Cuidando da sua saúde com qualidade e confiança.
+          </p>
+        </div>
+
+        <!-- Serviços -->
+        <div class="footer-col">
+          <h6>Serviços</h6>
+          <ul>
+            <li><a href="../index.html">Clique e Retire</a></li>
+            <li><a href="../index.html">Programa de Assinaturas</a></li>
+            <li><a href="../index.html">Manipulação</a></li>
+            <li><a href="../index.html">Atendimento Farmacêutico</a></li>
+          </ul>
+        </div>
+
+        <!-- Institucional -->
+        <div class="footer-col">
+          <h6>Institucional</h6>
+          <ul>
+            <li><a href="../index.html">Sobre Nós</a></li>
+            <li><a href="../index.html">Trabalhe Conosco</a></li>
+            <li><a href="../index.html">Política de Privacidade</a></li>
+          </ul>
+        </div>
+
+        <!-- Atendimento -->
+        <div class="footer-col">
+          <h6>Atendimento</h6>
+          <p>📞 SAC: <strong>0800 000 0000</strong></p>
+          <p>💬 WhatsApp: <strong>(61) 90000-0000</strong></p>
+          <p>✉️ <a href="sacfarma+@farmacia.com">contato@farma+.com</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Farma+. Todos os direitos reservados.</p>
+      <p>CNPJ: 00.000.000/0001-00 | Brasília/DF</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/script.js"></script>
+</body>
+
+</html>
