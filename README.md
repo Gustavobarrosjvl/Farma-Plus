@@ -1,4 +1,4 @@
-# Farma-
+# Farma+
 Marketplace de Farmacia
 
 Este projeto é um Marketplace de Farmácia online desenvolvido com HTML, CSS e JavaScript, simulando e-commerce para venda de medicamentos e produtos farmacêuticos.
