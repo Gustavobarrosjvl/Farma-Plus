@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title>Super Admin - Farmácias - Farma+</title>
+    <link rel="stylesheet" href="../../assets/css/superADM.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <a href="../../index.html" class="d-flex align-items-center text-decoration-none">
+            <img src="../../assets/img/logo_farma+.png" alt="Farma+" style="height: 40px; width: auto; ">
+        </a>
+
+        <div class="menu">
+            <a href="../superAdmin/principalSADM.html">Dashboard</a>
+            <a href="#" class="active">Farmácias</a>
+            <a href="../superAdmin/pedidosSADM.html">Pedidos</a>
+            <a href="../superAdmin/clientesSADM.html">Clientes</a>
+            <a href="../superAdmin/financeiroSADM.html">Financeiro</a>
+            <a href="../superAdmin/perfilSADM.html">Perfil</a>
+        </div>
+    </div>
+
+
+    <div class="content">
+        <div class="page-title">Farmácias</div>
+
+
+        <div class="cards">
+            <div class="card">
+                <h4>Total Registradas</h4>
+                <p>32</p>
+            </div>
+            <div class="card">
+                <h4>Ativas</h4>
+                <p>29</p>
+            </div>
+            <div class="card">
+                <h4>Inativas</h4>
+                <p>3</p>
+            </div>
+            <div class="card">
+                <h4>Pendentes</h4>
+                <p>4</p>
+            </div>
+            <div class="card">
+                <h4>Média de Vendas</h4>
+                <p>R$ 41.800</p>
+            </div>
+        </div>
+
+
+        <div class="graficos">
+            <div class="grafico-box">
+                <h3>Status das Farmácias</h3>
+                <canvas id="grafFarm"></canvas>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        new Chart(document.getElementById("grafFarm"), {
+            type: "doughnut",
+            data: {
+                labels: ["Ativas", "Inativas", "Pendentes"],
+                datasets: [{
+                    data: [29, 3, 4],
+                    backgroundColor: ["#007bff", "#ff4f81", "#ffc107"]
+                }]
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>

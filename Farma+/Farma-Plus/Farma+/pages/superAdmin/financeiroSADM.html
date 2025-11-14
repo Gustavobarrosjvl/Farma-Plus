@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title>Super Admin - Financeiro - Farma+</title>
+    <link rel="stylesheet" href="../../assets/css/superADM.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <a href="../../index.html" class="d-flex align-items-center text-decoration-none">
+            <img src="../../assets/img/logo_farma+.png" alt="Farma+" style="height: 40px; width: auto; ">
+        </a>
+
+        <div class="menu">
+            <a href="../superAdmin/principalSADM.html">Dashboard</a>
+            <a href="../superAdmin/farmaciaSADM.html">Farmácias</a>
+            <a href="../superAdmin/pedidosSADM.html">Pedidos</a>
+            <a href="../superAdmin/clientesSADM.html">Clientes</a>
+            <a href="#" class="active">Financeiro</a>
+            <a href="../superAdmin/perfilSADM.html">Perfil</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="page-title">Financeiro</div>
+
+
+        <div class="cards">
+            <div class="card">
+                <h4>Faturamento Geral</h4>
+                <p>R$ 183.520,00</p>
+            </div>
+            <div class="card">
+                <h4>Faturamento do Mês</h4>
+                <p>R$ 42.500,00</p>
+            </div>
+            <div class="card">
+                <h4>Ticket Médio</h4>
+                <p>R$ 56,20</p>
+            </div>
+        </div>
+
+
+        <div class="graficos">
+            <div class="grafico-box">
+                <h3>Faturamento Mensal</h3>
+                <canvas id="fatMensal"></canvas>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        new Chart(fatMensal, {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+                datasets: [{
+                    data: [20000, 22000, 28000, 30000, 42000, 50000],
+                    backgroundColor: '#007bff'
+                }]
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
